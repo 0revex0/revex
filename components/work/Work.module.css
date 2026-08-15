@@ -1,0 +1,125 @@
+.work {
+  width: 100%;
+  padding: 9rem 24px;
+}
+
+.header {
+  max-width: 1100px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.title {
+  display: inline-block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.subtitle {
+  margin: 0;
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: 800;
+  line-height: 1.05;
+}
+
+.description {
+  margin: 1.5rem auto 0;
+  max-width: 44rem;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: inherit;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 2.4rem 2rem;
+  border: 1px solid rgba(59, 130, 246, 0.12);
+  border-radius: 20px;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+  will-change: transform, box-shadow;
+  box-shadow: 0 10px 24px rgba(15,23,42,0.04);
+  opacity: 0;
+  transform: translateY(12px);
+  animation: reveal 0.7s cubic-bezier(.2,.08,.15,1) forwards;
+}
+
+.card:hover {
+  transform: none;
+  border-color: rgba(59, 130, 246, 0.18);
+  box-shadow: 0 12px 28px rgba(59,130,246,0.05);
+}
+
+.cards .card:nth-child(1) { animation-delay: 0.1s }
+.cards .card:nth-child(2) { animation-delay: 0.2s }
+.cards .card:nth-child(3) { animation-delay: 0.3s }
+
+.card:focus-visible {
+  outline: 2px solid rgba(59, 130, 246, 0.5);
+  outline-offset: 4px;
+}
+
+.cardMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.category {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #3b82f6;
+}
+
+.moduleName {
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.divider {
+  height: 1px;
+  width: 100%;
+  background: rgba(59, 130, 246, 0.12);
+  margin-bottom: 1.5rem;
+}
+
+.cardDescription {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.9;
+  color: inherit;
+}
+
+.arrow {
+  display: inline-flex;
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #3b82f6;
+  transition: transform 0.2s ease;
+}
+
+.card:hover .arrow {
+  transform: none;
+}
+
+@media (max-width: 900px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}

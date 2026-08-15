@@ -1,0 +1,451 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  min-height: 72px;
+  width: 100%;
+  padding: 0 24px;
+
+  background: var(--navbar-bg);
+  backdrop-filter: blur(14px);
+
+  border-bottom: 1px solid var(--border);
+
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+
+/* ==============================
+   الشعار
+============================== */
+
+.brand {
+  flex-shrink: 0;
+
+  font-size: 1.25rem;
+  font-weight: 900;
+
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+
+  color: #3b82f6;
+
+  transition: transform 0.18s ease;
+}
+
+.brand:hover {
+  transform: scale(1.02);
+}
+
+
+/* ==============================
+   روابط الكمبيوتر
+============================== */
+
+.links {
+  display: flex;
+  align-items: center;
+
+  gap: 28px;
+  margin: 0 24px;
+}
+
+.link {
+  position: relative;
+
+  font-size: 0.95rem;
+  font-weight: 500;
+
+  text-decoration: none;
+  color: inherit;
+
+  white-space: nowrap;
+
+  transition:
+    color 0.18s ease,
+    transform 0.18s ease;
+}
+
+.link::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -4px;
+
+  width: 100%;
+  height: 1px;
+
+  background: transparent;
+
+  transform: scaleX(0);
+  transform-origin: left;
+
+  transition:
+    background-color 0.15s ease,
+    transform 0.15s ease;
+}
+
+.link:hover,
+.link:focus-visible {
+  color: currentColor;
+}
+
+.link:hover::after,
+.link:focus-visible::after {
+  background: #3b82f6;
+  transform: scaleX(1);
+}
+
+.active {
+  color: #3b82f6;
+}
+
+.active::after {
+  background: #3b82f6;
+  transform: scaleX(1);
+}
+
+
+/* ==============================
+   الأزرار
+============================== */
+
+.actions {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  flex-shrink: 0;
+}
+
+
+/* ==============================
+   اختيار اللغة
+============================== */
+
+.localeSelect {
+  min-width: 130px;
+  height: 40px;
+
+  border: 1px solid var(--border);
+  border-radius: 999px;
+
+  background: transparent;
+  color: inherit;
+
+  padding: 0 12px;
+
+  font: inherit;
+
+  cursor: pointer;
+
+  appearance: none;
+  outline: none;
+}
+
+.localeSelect:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.localeSelect:focus-visible {
+  outline: none;
+}
+
+.localeSelect option {
+  color: #222;
+  background: #fff;
+}
+
+.localeSelect option:checked {
+  color: #fff;
+  background: #3478f6;
+}
+
+
+/* ==============================
+   زر الوضع + زر القائمة
+============================== */
+
+.iconButton,
+.menuButton {
+  width: 40px;
+  height: 40px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--border);
+  border-radius: 999px;
+
+  background: transparent;
+  color: inherit;
+
+  cursor: pointer;
+
+  padding: 0;
+  margin: 0;
+
+  appearance: none;
+  outline: none;
+
+  line-height: 1;
+
+  transition:
+    transform 0.12s ease,
+    background-color 0.18s ease;
+}
+
+.iconButton {
+  font-size: 20px;
+}
+
+.iconButton:hover,
+.localeSelect:hover,
+.menuButton:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.iconButton:focus-visible,
+.localeSelect:focus-visible,
+.menuButton:focus-visible {
+  outline: none;
+}
+
+.iconButton:active,
+.menuButton:active {
+  transform: scale(0.98);
+}
+
+
+/* ==============================
+   زر القائمة
+============================== */
+
+.menuButton {
+  display: none;
+  font-size: 21px;
+}
+
+
+/* ==============================
+   القائمة المتنقلة
+============================== */
+
+/*
+   لا نضع display:none هنا.
+
+   لأن Navbar.tsx يستخدم:
+
+   {mobileOpen && (
+      <div className={styles.mobileMenu}>
+   )}
+
+   أي أن React نفسه يتحكم في ظهورها.
+*/
+
+.mobileMenu {
+  position: absolute;
+
+  top: 100%;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 12px 16px 16px;
+
+  /* لون ثابت غير شفاف في الوضع النهاري */
+  background: #ffffff;
+
+  border-bottom: 1px solid var(--border);
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+/* الوضع الليلي */
+
+:global(.dark) .mobileMenu {
+  background: #111111;
+
+  border-bottom-color: var(--border);
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.45);
+}
+
+.mobileLink {
+  width: 100%;
+
+  padding: 14px 12px;
+
+  border-radius: 10px;
+
+  text-decoration: none;
+
+  color: inherit;
+
+  font-size: 0.95rem;
+
+  text-align: left;
+
+  box-sizing: border-box;
+
+  transition:
+    background-color 0.18s ease,
+    color 0.18s ease;
+}
+
+.mobileLink:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.mobileActive {
+  color: #3b82f6;
+}
+
+
+/* ==============================
+   الشاشات المتوسطة
+============================== */
+
+@media (max-width: 1100px) {
+
+  .links {
+    gap: 18px;
+    margin: 0 16px;
+  }
+
+  .link {
+    font-size: 0.88rem;
+  }
+
+  .localeSelect {
+    min-width: 115px;
+  }
+}
+
+
+/* ==============================
+   الهاتف والشاشات الصغيرة
+============================== */
+
+@media (max-width: 900px) {
+
+  .navbar {
+    min-height: 68px;
+    padding: 0 16px;
+  }
+
+  /* إخفاء روابط الكمبيوتر */
+  .links {
+    display: none;
+  }
+
+  /* إظهار زر القائمة */
+  .menuButton {
+    display: inline-flex;
+  }
+
+  /*
+     القائمة تظهر عندما يكون mobileOpen = true
+     لأن JSX هو الذي يضيفها للصفحة.
+  */
+
+  .mobileMenu {
+    display: flex;
+  }
+}
+
+
+/* ==============================
+   الهواتف الصغيرة جدًا
+============================== */
+
+@media (max-width: 500px) {
+
+  .navbar {
+    min-height: 64px;
+    padding: 0 12px;
+  }
+
+  .brand {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.brand img {
+  display: block;
+  width: clamp(80px, 10vw, 120px);
+  height: auto;
+  object-fit: contain;
+}
+  .actions {
+    gap: 7px;
+  }
+
+  .localeSelect {
+    min-width: 92px;
+    width: 92px;
+
+    height: 38px;
+
+    padding: 0 8px;
+
+    font-size: 0.78rem;
+  }
+
+  .iconButton,
+  .menuButton {
+    width: 38px;
+    height: 38px;
+  }
+
+  .mobileMenu {
+    padding: 10px 12px 14px;
+  }
+}
+
+
+/* ==============================
+   الهواتف الضيقة جدًا
+============================== */
+
+@media (max-width: 360px) {
+
+  .navbar {
+    padding: 0 10px;
+  }
+
+  .brand {
+    font-size: 0.95rem;
+  }
+
+  .localeSelect {
+    min-width: 82px;
+    width: 82px;
+
+    font-size: 0.72rem;
+  }
+
+  .actions {
+    gap: 5px;
+  }
+}

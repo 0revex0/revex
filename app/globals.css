@@ -1,0 +1,1348 @@
+:root{
+  --background:#ffffff;
+  --foreground:#111111;
+
+  --primary:#3b82f6;
+
+  --radius:24px;
+
+  --max-width:1200px;
+}
+
+.dark{
+  --background:#0b0b0b;
+  --foreground:#f5f5f5;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+
+  background:var(--background);
+
+  color:var(--foreground);
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  transition:
+    background .3s,
+    color .3s;
+
+      background:
+    radial-gradient(circle at top,#3b82f615 0%,transparent 40%),
+    var(--background);
+
+}
+
+img{
+
+  max-width:100%;
+
+  display:block;
+
+}
+
+a{
+
+  color:inherit;
+
+  text-decoration:none;
+
+}
+
+button{
+
+  font:inherit;
+
+}
+
+/* ======================================
+ HERO
+====================================== */
+
+.hero{
+
+  width:100%;
+
+  max-width:1200px;
+
+  margin:auto;
+
+  padding:90px 24px 70px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  align-items:center;
+
+  text-align:center;
+
+  gap:40px;
+
+  position:relative;
+
+}
+
+.hero-image{
+
+  width:100%;
+
+  max-width:500px;
+
+  margin:auto;
+
+  border-radius:30px;
+
+  overflow:hidden;
+
+  box-shadow:
+  0 30px 70px rgba(0,0,0,.18);
+
+  transition: .3s;
+
+  transition: .35s ease;
+cursor: pointer;
+
+}
+
+.hero-image:hover{
+
+    transform: translateY(-6px);
+
+    box-shadow:
+    0 40px 90px rgba(0,0,0,.22);
+
+}
+
+.hero-image img{
+
+  width:100%;
+
+  height:auto;
+
+}
+
+.hero-content h1{
+
+    font-size: clamp(2.5rem,5vw,4.4rem);
+
+    font-weight: 900;
+
+    margin-top: 20px;
+
+    letter-spacing: -.03em;
+
+}
+
+.hero-content h2{
+
+    margin-top:14px;
+
+    font-size:clamp(1.1rem,2vw,1.6rem);
+
+    font-weight:700;
+
+    letter-spacing:.55rem;
+
+    color:var(--primary);
+
+    opacity:.9;
+
+}
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:260px;
+
+    height:260px;
+
+    border-radius:50%;
+
+    background:#3b82f615;
+
+    filter:blur(90px);
+
+    z-index:-1;
+
+}
+
+/* ======================================
+ INTRODUCTION
+====================================== */
+
+.introduction{
+
+  width:100%;
+
+  max-width:1200px;
+
+  margin:auto;
+
+  padding:40px 24px 35px;
+
+  text-align:center;
+
+ }
+
+.introduction h2{
+
+    font-size:clamp(2.2rem,4vw,3.2rem);
+
+    font-weight:800;
+
+    margin-bottom:25px;
+
+}
+.introduction p{
+
+    max-width:700px;
+
+    margin:12px auto;
+
+}
+
+/* ===========================
+   SECTION CARDS
+=========================== */
+
+.cards{
+
+    width:100%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:20px 24px 100px;
+
+    display:grid;
+
+    gap:28px;
+
+}
+
+.card{
+
+    padding:32px;
+
+    border-radius:24px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.25s;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    min-height:260px;
+
+}
+.card:last-child{
+
+    grid-column:1/-1;
+
+    max-width:520px;
+
+    width:100%;
+
+    margin:auto;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:rgba(59,130,246,.35);
+
+    box-shadow:
+    0 20px 50px rgba(59,130,246,.12);
+
+}
+
+.card h3{
+
+    font-size:1.6rem;
+
+    margin-bottom:18px;
+
+}
+
+.card p{
+
+    line-height:1.9;
+
+    opacity:.85;
+
+    flex:1;
+
+}
+
+.cardButton{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:100%;
+
+    margin-top:24px;
+
+    padding:12px 22px;
+
+    border-radius:999px;
+
+    background:#3b82f6;
+
+    color:white;
+
+    font-weight:700;
+
+    text-align:center;
+
+    transition:.2s;
+
+}
+
+.cardButton:hover{
+
+    opacity:.9;
+
+}
+
+@media (min-width:900px){
+
+.cards{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+/* ======================================
+   BACKGROUND
+====================================== */
+
+
+
+html.dark body{
+
+    background:
+    radial-gradient(circle at top,#3b82f625 0%,transparent 40%),
+    var(--background);
+
+}
+
+/* ======================================
+   ABOUT HERO
+====================================== */
+
+.aboutHero{
+
+    width:100%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:90px 24px 60px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    text-align:center;
+
+    gap:35px;
+
+}
+
+.aboutHeroImage{
+
+    width:100%;
+
+    max-width:420px;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.15);
+
+}
+
+.aboutHeroImage img{
+
+    width:100%;
+
+    display:block;
+
+}
+
+.aboutHeroContent h1{
+
+    font-size:clamp(2.3rem,5vw,4rem);
+
+    margin-bottom:18px;
+
+}
+
+.aboutHeroContent p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    line-height:1.9;
+
+    opacity:.85;
+
+}
+
+/* ======================================
+   ABOUT SECTIONS
+====================================== */
+
+.aboutSection{
+
+    width:100%;
+
+    max-width:900px;
+
+    margin:auto;
+
+    padding:50px 24px;
+
+}
+
+.aboutSection h2{
+
+    font-size:clamp(1.8rem,4vw,2.8rem);
+
+    margin-bottom:22px;
+
+    text-align:center;
+
+}
+
+.aboutSection p{
+
+    line-height:2;
+
+    text-align:center;
+
+    opacity:.9;
+
+}
+
+/* ======================================
+   ABOUT CARDS
+====================================== */
+
+.infoGrid,
+.schoolGrid,
+.skillsGrid{
+
+    display:grid;
+
+    gap:24px;
+
+    margin-top:40px;
+
+}
+
+.infoCard,
+.schoolCard,
+.skillCard{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:24px;
+
+    padding:28px;
+
+    transition:.25s;
+
+}
+
+.infoCard:hover,
+.schoolCard:hover,
+.skillCard:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.12);
+
+}
+
+.infoCard{
+
+    text-align:center;
+
+}
+.schoolCard h3{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    text-align:center;
+
+    margin-bottom:14px;
+
+    font-size:1.2rem;
+
+}
+
+.infoCard h3 svg,
+.schoolCard h3 svg{
+
+    color:#3b82f6;
+
+    flex-shrink:0;
+
+}
+
+.infoCard p,
+.schoolCard p{
+
+    line-height:1.8;
+
+    margin-bottom:18px;
+
+}
+
+.infoCard a,
+.schoolCard a{
+
+    display:inline-block;
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    background:#3b82f6;
+
+    color:#fff;
+
+    font-weight:700;
+
+    transition:.2s;
+
+}
+
+.infoCard a:hover,
+.schoolCard a:hover{
+
+    opacity:.9;
+
+}
+
+.skillCard{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    font-weight:700;
+
+    min-height:110px;
+
+}
+
+/* ===== Desktop ===== */
+
+@media (min-width:900px){
+
+.infoGrid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.schoolGrid{
+
+grid-template-columns:repeat(3,1fr);
+
+}
+
+.skillsGrid{
+
+grid-template-columns:repeat(3,1fr);
+
+}
+
+}
+
+/* ======================================
+   DEVICES
+====================================== */
+
+.devicesHero{
+
+    width:100%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:80px 24px 50px;
+
+    text-align:center;
+
+}
+
+.devicesHero h1{
+
+    font-size:clamp(2.2rem,5vw,3.8rem);
+
+    margin-bottom:20px;
+
+}
+
+.devicesHero p{
+
+    max-width:760px;
+
+    margin:auto;
+
+    line-height:1.9;
+
+    opacity:.8;
+
+}
+
+.deviceSection{
+
+    width:100%;
+
+    max-width:1200px;
+
+    margin:70px auto;
+
+    padding:0 24px;
+
+}
+
+.deviceImage{
+
+    width:100%;
+
+    max-width:600px;
+
+    margin:auto;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.18);
+
+}
+
+.deviceSection h2{
+
+    text-align:center;
+
+    font-size:2rem;
+
+    margin:30px 0 40px;
+
+}
+
+.deviceGrid{
+
+    display:grid;
+
+    gap:24px;
+
+}
+
+.deviceBox{
+
+    padding:28px;
+
+    border-radius:24px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.25s;
+
+}
+
+.deviceBox:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.12);
+
+}
+
+.deviceBox h3{
+
+    text-align:center;
+
+    margin-bottom:18px;
+
+    font-size:1.3rem;
+
+}
+
+.deviceBox ul{
+
+    list-style:none;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+    text-align:center;
+
+}
+
+.deviceBox p{
+
+    text-align:center;
+
+    line-height:1.9;
+
+}
+
+@media (min-width:900px){
+
+.deviceGrid{
+
+grid-template-columns:repeat(3,1fr);
+
+}
+
+}
+
+/* =========================================
+   INTERESTS PAGE
+========================================= */
+
+.interestsPage {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 24px 100px;
+}
+
+.interestsHero {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.interestsHero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  margin-bottom: 20px;
+}
+
+.interestsHero p {
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.9;
+  opacity: 0.8;
+}
+
+.interestsSections {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.interestSection {
+  width: 100%;
+}
+
+.interestSection > h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+}
+
+.interestCards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+
+  /*
+    مهم:
+    direction: rtl تجعل أول بطاقة
+    تظهر بصريًا على اليمين.
+  */
+  direction: rtl;
+}
+
+.interestCard {
+  padding: 30px;
+  border-radius: 24px;
+
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(128, 128, 128, 0.18);
+
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.interestCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.13);
+}
+
+.interestCard h3 {
+  text-align: center;
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+}
+
+.interestCard p {
+  line-height: 1.9;
+  text-align: right;
+}
+
+.interestCard ul {
+  margin: 0;
+  padding: 0 20px 0 0;
+  line-height: 2;
+}
+
+.interestCard li {
+  margin-bottom: 6px;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .interestsPage {
+    padding: 45px 18px 80px;
+  }
+
+  .interestsHero {
+    margin-bottom: 50px;
+  }
+
+  .interestsSections {
+    gap: 45px;
+  }
+
+  .interestCards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .interestCard {
+    padding: 24px;
+  }
+
+  .interestSection > h2 {
+    font-size: 1.5rem;
+  }
+}
+.examplesCard a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.examplesCard a:hover {
+  text-decoration: underline;
+}
+
+/* =========================================
+   SOCIAL PAGE
+========================================= */
+
+.socialPage {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 24px 100px;
+}
+
+.socialHero {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.socialHero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  margin-bottom: 18px;
+}
+
+.socialHero p {
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.9;
+  opacity: 0.8;
+}
+
+.socialGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.socialCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+
+  padding: 28px;
+  border-radius: 24px;
+
+  text-decoration: none;
+  color: inherit;
+
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(128, 128, 128, 0.18);
+
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.socialCard:not(.socialCardDisabled):hover {
+  transform: translateY(-5px);
+  border-color: rgba(37, 99, 235, 0.45);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.13);
+}
+
+.socialCardDisabled {
+  opacity: 0.55;
+  cursor: default;
+}
+
+.socialIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 52px;
+  height: 52px;
+
+  border-radius: 16px;
+
+  background: rgba(37, 99, 235, 0.1);
+  color: #2563eb;
+}
+
+.socialContent {
+  flex: 1;
+}
+
+.socialContent h2 {
+  margin: 0 0 7px;
+  font-size: 1.2rem;
+}
+
+.socialUsername {
+  margin: 0 0 5px;
+  font-weight: 600;
+}
+
+.socialDescription {
+  margin: 0 0 14px;
+  line-height: 1.7;
+  opacity: 0.75;
+}
+
+.socialAction {
+  display: inline-block;
+  color: #2563eb;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 900px) {
+  .socialGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .socialPage {
+    padding: 45px 18px 80px;
+  }
+
+  .socialGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .socialCard {
+    padding: 23px;
+  }
+}
+
+/* =========================
+   AI Assistant
+   ========================= */
+
+.aiPage {
+  width: min(1100px, calc(100% - 32px));
+  margin: 70px auto 40px;
+  direction: rtl;
+}
+
+.aiHero {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.aiHeroIcon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  background: #eef4ff;
+  color: #3478f6;
+}
+
+.aiHero h1 {
+  margin: 0;
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 800;
+}
+
+.aiHero p {
+  max-width: 650px;
+  margin: 12px auto 0;
+  color: #666;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.aiChat {
+  width: 100%;
+  height: min(700px, calc(100vh - 220px));
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid #e7e7e7;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+}
+
+.aiMessages {
+  flex: 1;
+  min-height: 0;
+  padding: 18px;
+  overflow-y: auto;
+ overflow-x: hidden;
+}
+
+.aiMessages::-webkit-scrollbar {
+  width: 7px;
+}
+
+.aiMessages::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.aiMessages::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 20px;
+}
+
+.aiMessages::-webkit-scrollbar-thumb:hover {
+  background: #3478f6;
+}
+
+.aiMessages {
+  scrollbar-width: thin;
+  scrollbar-color: #d1d5db transparent;
+}
+
+.aiMessages {
+  flex: 1;
+  min-height: 0;
+  padding: 18px;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  direction: ltr;
+}
+
+.aiMessage {
+  width: fit-content;
+  max-width: 75%;
+  padding: 12px 16px;
+  border-radius: 18px;
+  line-height: 1.75;
+  font-size: 15px;
+  white-space: pre-wrap;
+  direction: rtl;
+  overflow-wrap: anywhere;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.aiUserMessage {
+  align-self: flex-end;
+  background: #3478f6;
+  color: white;
+  border-bottom-right-radius: 6px;
+}
+
+.aiAssistantMessage {
+  align-self: flex-start;
+  background: #f3f5f8;
+  color: #171717;
+  border-bottom-left-radius: 6px;
+}
+.aiSuggestions {
+  padding: 0 28px 20px;
+}
+
+.aiSuggestions h3 {
+  margin: 0 0 12px;
+  font-size: 15px;
+  color: #555;
+}
+
+.aiSuggestionGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.aiSuggestionGrid button {
+  border: 1px solid #e1e5eb;
+  border-radius: 14px;
+  padding: 10px 14px;
+  background: white;
+  color: #222;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.aiSuggestionGrid button:hover {
+  border-color: #3478f6;
+  background: #f4f7ff;
+  transform: translateY(-1px);
+}
+
+.aiInputArea {
+  display: flex;
+  gap: 10px;
+  padding: 18px;
+  border-top: 1px solid #e8e8e8;
+  background: #fafafa;
+}
+
+.aiInputArea input {
+  flex: 1;
+  min-width: 0;
+  height: 50px;
+  padding: 0 17px;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  outline: none;
+  background: white;
+  color: #222;
+  font-size: 15px;
+  direction: rtl;
+}
+
+.aiInputArea input:focus {
+  border-color: #3478f6;
+  box-shadow: 0 0 0 3px rgba(52, 120, 246, 0.1);
+}
+
+.aiInputArea button {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  border: 0;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #3478f6;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.aiInputArea button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  background: #2567dc;
+}
+
+.aiInputArea button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.aiRetryButton {
+  align-self: flex-end;
+  margin-top: 4px;
+  padding: 9px 14px;
+  border: 1px solid #dce3ed;
+  border-radius: 12px;
+  background: white;
+  color: #3478f6;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.aiRetryButton:hover {
+  background: #f4f7ff;
+  border-color: #3478f6;
+}
+
+/* الهاتف */
+@media (max-width: 700px) {
+  .aiPage {
+    width: min(100% - 20px, 1100px);
+    margin-top: 35px;
+  }
+
+  .aiChat {
+  height: calc(100vh - 180px);
+  min-height: 500px;
+  border-radius: 18px;
+}
+  .aiMessages {
+  padding: 18px;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+  .aiMessage {
+  width: fit-content;
+  max-width: 88%;
+}
+
+  .aiSuggestions {
+    padding: 0 18px 16px;
+  }
+
+  .aiSuggestionGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .aiSuggestionGrid button {
+    width: 100%;
+    text-align: right;
+  }
+
+  .aiInputArea {
+    padding: 12px;
+  }
+
+  .aiRetryButton {
+  margin-top: 10px;
+  padding: 9px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  color: inherit;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.aiRetryButton:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.aiRetryButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+}
+
+.aiChatHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.aiClearButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 12px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  background: #fff;
+  color: #555;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.aiClearButton:hover {
+  background: #f5f5f5;
+  color: #d33;
+  border-color: rgba(211, 51, 51, 0.2);
+}
+
+.aiClearButton:active {
+  transform: scale(0.97);
+}

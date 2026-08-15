@@ -1,0 +1,91 @@
+.about {
+  width: 100%;
+  padding: 9rem 24px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  gap: 3.5rem;
+}
+
+.intro {
+  max-width: 680px;
+}
+
+.title {
+  display: inline-block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.description {
+  margin: 0;
+  font-size: clamp(1rem, 1vw + 0.95rem, 1.15rem);
+  line-height: 1.9;
+  font-weight: 400;
+  max-width: 38rem;
+  color: rgba(19, 19, 19, 0.88);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  padding: 2rem;
+  border: 1px solid rgba(59, 130, 246, 0.12);
+  border-radius: 20px;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  will-change: transform, box-shadow;
+  transform: translateY(0);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.04);
+  opacity: 0;
+  transform: translateY(12px);
+  animation: reveal 0.7s cubic-bezier(.2,.08,.15,1) forwards;
+}
+
+.card:hover {
+  transform: none;
+  border-color: rgba(59, 130, 246, 0.18);
+  box-shadow: 0 10px 26px rgba(59, 130, 246, 0.06);
+}
+
+.cards .card:nth-child(1) { animation-delay: 0.08s }
+.cards .card:nth-child(2) { animation-delay: 0.16s }
+.cards .card:nth-child(3) { animation-delay: 0.24s }
+
+.cardTitle {
+  margin: 0 0 1rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #3b82f6;
+}
+
+.cardText {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.9;
+  color: inherit;
+}
+
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 900px) {
+  .container {
+    gap: 2rem;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}

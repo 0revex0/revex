@@ -1,0 +1,107 @@
+.identity {
+  width: 100%;
+  padding: 9rem 24px;
+}
+
+.content {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.label {
+  display: inline-block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.title {
+  margin: 0;
+  font-size: clamp(2.25rem, 4vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  margin-bottom: 2rem;
+}
+
+.copy {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 44rem;
+}
+
+.copy p {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: inherit;
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 4rem;
+  border-top: 1px solid rgba(59, 130, 246, 0.12);
+}
+
+.metric {
+  padding: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-left: 1px solid rgba(59, 130, 246, 0.12);
+  border-radius: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  will-change: transform, box-shadow;
+  box-shadow: 0 8px 18px rgba(15,23,42,0.03);
+  opacity: 0;
+  transform: translateY(12px);
+  animation: reveal 0.7s cubic-bezier(.2,.08,.15,1) forwards;
+}
+
+.metric:first-child {
+  border-left: none;
+}
+
+.metric:hover {
+  transform: none;
+  box-shadow: 0 12px 26px rgba(59,130,246,0.04);
+}
+
+.metrics .metric:nth-child(1) { animation-delay: 0.08s }
+.metrics .metric:nth-child(2) { animation-delay: 0.16s }
+.metrics .metric:nth-child(3) { animation-delay: 0.24s }
+
+.metricLabel {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: inherit;
+}
+
+.metricValue {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #3b82f6;
+}
+
+@media (max-width: 900px) {
+  .metrics {
+    grid-template-columns: 1fr;
+    border-top: none;
+  }
+
+  .metric {
+    border-left: none;
+    border-top: 1px solid rgba(59, 130, 246, 0.12);
+    padding: 1.25rem 0;
+  }
+
+  .metric:first-child {
+    border-top: none;
+  }
+}
