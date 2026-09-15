@@ -247,6 +247,19 @@
     "about.skills.problemSolving": "🧩 حل المشكلات",
     "about.skills.logicalThinking": "🧠 التفكير المنطقي",
     "about.skills.selfLearning": "📚 التعلم الذاتي",
-    "about.skills.electronics": "🔧 استخدام وفهم مختلف أنواع الأجهزة الإلكترونية والتعامل معها بسهولة"
+    "about.skills.electronics": "🔧 استخدام وفهم مختلف أنواع الأجهزة الإلكترونية والتعامل معها بسهولة",
+    "devices.lenovoLp75.title": "Lenovo Thinkplus LivePods LP75",
+"devices.lenovoLp75.specs.brand": "Lenovo Thinkplus",
+"devices.lenovoLp75.specs.model": "LivePods LP75",
+"devices.lenovoLp75.specs.bluetooth": "Bluetooth 5.3",
+"devices.lenovoLp75.specs.color": "اللون: الأسود",
+"devices.lenovoLp75.specs.battery": "حتى 6 ساعات تشغيل",
+
+"devices.lenovoLp75.usage.music": "الاستماع للموسيقى",
+"devices.lenovoLp75.usage.gaming": "الألعاب",
+"devices.lenovoLp75.usage.calls": "المكالمات",
+"devices.lenovoLp75.usage.dailyUse": "الاستخدام اليومي",
+
+"devices.lenovoLp75.experience": "أستخدمها للاستماع والمكالمات والألعاب، وهي من أجهزتي اللاسلكية."
   }
 }
