@@ -245,6 +245,19 @@
     "about.skills.problemSolving": "🧩 Résolution de problèmes",
     "about.skills.logicalThinking": "🧠 Pensée logique",
     "about.skills.selfLearning": "📚 Apprentissage autonome",
-    "about.skills.electronics": "🔧 Compréhension et utilisation de différents types d'appareils électroniques avec facilité"
+    "about.skills.electronics": "🔧 Compréhension et utilisation de différents types d'appareils électroniques avec facilité",
+    "devices.lenovoLp75.title": "Lenovo Thinkplus LivePods LP75",
+"devices.lenovoLp75.specs.brand": "Lenovo Thinkplus",
+"devices.lenovoLp75.specs.model": "LivePods LP75",
+"devices.lenovoLp75.specs.bluetooth": "Bluetooth 5.3",
+"devices.lenovoLp75.specs.color": "Couleur : noir",
+"devices.lenovoLp75.specs.battery": "Jusqu'à 6 heures d'autonomie",
+
+"devices.lenovoLp75.usage.music": "Écouter de la musique",
+"devices.lenovoLp75.usage.gaming": "Jeux",
+"devices.lenovoLp75.usage.calls": "Appels",
+"devices.lenovoLp75.usage.dailyUse": "Utilisation quotidienne",
+
+"devices.lenovoLp75.experience": "Je les utilise pour écouter de la musique, passer des appels et jouer. Ce sont l'un de mes appareils sans fil."
   }
 }
