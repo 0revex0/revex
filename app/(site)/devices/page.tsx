@@ -48,6 +48,24 @@ export default function DevicesPage() {
         ]}
         experience={t("devices.xiaomi.experience")}
       />
+      <DeviceCard
+  title="Lenovo Thinkplus LivePods LP75"
+  image="/images/devices/lp75.png"
+  specs={[
+    "Lenovo Thinkplus",
+    "LivePods LP75",
+    "Bluetooth 5.3",
+    "اللون: الأسود",
+    "حتى 6 ساعات تشغيل",
+  ]}
+  usage={[
+    "الاستماع للموسيقى",
+    "الألعاب",
+    "المكالمات",
+    "الاستخدام اليومي",
+  ]}
+  experience="أستخدمها للاستماع والمكالمات والألعاب، وهي من أجهزتي اللاسلكية."
+/>
     </>
   );
 }
