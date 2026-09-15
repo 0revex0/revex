@@ -245,6 +245,19 @@
     "about.skills.problemSolving": "🧩 Problem Solving",
     "about.skills.logicalThinking": "🧠 Logical Thinking",
     "about.skills.selfLearning": "📚 Self-Learning",
-    "about.skills.electronics": "🔧 Understanding and using different types of electronic devices with ease"
+    "about.skills.electronics": "🔧 Understanding and using different types of electronic devices with ease",
+    "devices.lenovoLp75.title": "Lenovo Thinkplus LivePods LP75",
+"devices.lenovoLp75.specs.brand": "Lenovo Thinkplus",
+"devices.lenovoLp75.specs.model": "LivePods LP75",
+"devices.lenovoLp75.specs.bluetooth": "Bluetooth 5.3",
+"devices.lenovoLp75.specs.color": "Color: Black",
+"devices.lenovoLp75.specs.battery": "Up to 6 hours of playback",
+
+"devices.lenovoLp75.usage.music": "Music listening",
+"devices.lenovoLp75.usage.gaming": "Gaming",
+"devices.lenovoLp75.usage.calls": "Calls",
+"devices.lenovoLp75.usage.dailyUse": "Daily use",
+
+"devices.lenovoLp75.experience": "I use them for listening to music, calls, and gaming. They are one of my wireless devices."
   }
 }
